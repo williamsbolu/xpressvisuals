@@ -409,7 +409,7 @@ nav a,
           font-size: 3.5rem; } }
 
 .works__content {
-  max-width: 90rem;
+  max-width: 80rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -420,7 +420,51 @@ nav a,
 
 .content__box {
   height: 50rem;
-  background-color: #fff; }
+  background-size: cover;
+  background-position: center;
+  cursor: pointer; }
+
+@media only screen and (max-width: 60em) {
+  .card__container {
+    display: none; } }
+
+.card {
+  background-color: #1a1a1a;
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: 40rem min-content;
+  transition: transform .3s; }
+  .card:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
+  .card .card__picture {
+    position: relative;
+    background-size: cover;
+    background-position: center; }
+    .card .card__picture--1 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/soo-plum-logo.jpg); }
+    .card .card__picture--2 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/active-merch.jpg); }
+    .card .card__picture--3 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/30-days-posters.jpg); }
+    .card .card__picture--4 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/loGO-NEW-VISION-X.jpg); }
+    .card .card__picture--button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 1rem 3rem;
+      border-radius: 50px;
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      cursor: pointer; }
+  .card .card__content {
+    padding: 2rem; }
+    .card .card__content h3 {
+      font-weight: 600;
+      font-size: 1.7rem;
+      text-transform: uppercase; }
 
 .section-form {
   padding: 6rem 2rem 10rem 2rem; }

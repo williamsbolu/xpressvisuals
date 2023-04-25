@@ -44,7 +44,7 @@
 }
 
 .works__content {
-    max-width: 90rem;
+    max-width: 80rem;
     margin: 0 auto;
 
     display: grid;
@@ -58,5 +58,79 @@
 
 .content__box {
     height: 50rem;
-    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+
+
+}
+
+.card__container {
+
+
+    @media only screen and (max-width: $bp-960px) {
+        display: none;
+    }
+}
+
+.card {
+    background-color: #1a1a1a;
+    cursor: pointer;
+    display: grid;
+    grid-template-rows: 40rem min-content;
+    transition: transform .3s;
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+
+    .card__picture {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+
+        &--1 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/soo-plum-logo.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/active-merch.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/30-days-posters.jpg);
+        }
+
+        &--4 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/loGO-NEW-VISION-X.jpg);
+        }
+
+        &--button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            cursor: pointer;
+        }
+    }
+
+    .card__content {
+        padding: 2rem;
+
+        // display: grid;
+        // grid-template-rows: min-content 6rem min-content;
+        // grid-row-gap: 1.2rem;
+
+        & h3 {
+            font-weight: 600;
+            font-size: 1.7rem;
+            text-transform: uppercase;
+        }
+    }
 }
