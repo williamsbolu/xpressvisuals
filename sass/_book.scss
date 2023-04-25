@@ -1,0 +1,64 @@
+.book-now {
+    margin: 10rem 0 0 0;
+}
+
+.book {
+    padding: 10rem 0;
+    background-color: $color-primary;
+    display: grid;
+    justify-content: center;
+    grid-row-gap: 2rem;
+
+    @media only screen and (max-width: $bp-large) {
+        grid-gap: 3rem;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-large) {
+            flex-direction: column;
+        }
+    }
+
+    & h2 {
+        font-size: 7rem;
+        font-weight: 700;
+
+        @media only screen and (max-width: $bp-768px) {
+            font-size: 6rem;
+        }
+
+        @media only screen and (max-width: $bp-576px) {
+            font-size: 5rem;
+        }
+    }
+
+    &-icon-block {
+        padding: 0 2rem;
+    }
+
+    &__button {
+        background-color: #fff;
+        display: inline-block;
+        justify-self: center;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        color: #111;
+        font-weight: 700;
+        transition: all .3s;
+    }
+
+    &__button:hover {
+        background-color: #111;
+        color: #fff;
+    }
+}
+
+.icon-book {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: $color-tetiary;
+    animation: rotate 4s linear infinite;
+}

@@ -1,0 +1,74 @@
+$color-primary: #f64d52;
+$color-secondary: #548Bf4;
+$color-accent: #FFAAC3;
+$color-tetiary: #FFC569;
+$color-white-dim: #FFFFFFCC;
+$color-body: #fff;
+
+// RESPONSIVE BREAKPOINTS
+$bp-1200px: 75em; // 1200px
+
+$bp-large: 62.5em; // 1000px
+$bp-960px: 60em; // 960px
+$bp-900px: 56.25em; // 900px
+$bp-medium: 50em; // 800px
+$bp-768px: 48em; // 768px
+$bp-small: 37.5em; // 600px
+$bp-576px: 36em; // 576px
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Satoshi', sans-serif;
+    color: $color-body;
+    line-height: 1.5;
+    font-size: 1.8rem;
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: #111;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transition: opacity .45s;
+
+    background-color: rgba(0, 0, 0, 0.371);
+    width: 100%;
+    height: 100vh;
+}
+
+.cut-display {
+    opacity: 0;
+    width: 0;
+    visibility: hidden;
+    transition: opacity .45s;
+}
+
+.add-display {
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+    transition: opacity .45s;
+}
