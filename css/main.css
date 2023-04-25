@@ -501,13 +501,17 @@ nav a,
       .testimonials__text {
         font-size: 3rem; } }
   .testimonials__user-box {
-    margin-top: 3rem; }
+    margin-top: 4rem; }
     .testimonials__user-box h4 {
       font-size: 1.6rem; }
   .testimonials__user {
     font-size: 1.9rem;
     color: #FFFFFF99;
     font-weight: 500; }
+    .testimonials__user-img {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 100px; }
 
 .faqs {
   max-width: 65rem;
@@ -537,7 +541,7 @@ nav a,
     outline: none; }
 
 .collapsible__icon {
-  fill: #d4d4d4de;
+  fill: #fff;
   width: 2rem;
   height: 2rem;
   transition: transform .3s; }

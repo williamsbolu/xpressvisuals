@@ -19,7 +19,7 @@
     }
 
     &__user-box {
-        margin-top: 3rem;
+        margin-top: 4rem;
 
         & h4 {
             font-size: 1.6rem;
@@ -30,5 +30,11 @@
         font-size: 1.9rem;
         color: #FFFFFF99;
         font-weight: 500;
+
+        &-img {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 100px;
+        }
     }
 }
