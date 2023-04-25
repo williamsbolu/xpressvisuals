@@ -13,7 +13,7 @@ const navSlide = () => {
   const navToggler = () => {
     //toggle nav
     nav.classList.toggle("nav-active");
-    navBackground.classList.toggle("cut-display");
+    navBackground.classList.toggle("cut-modal-display");
 
     // animate links
     navLinks.forEach((link, index) => {
@@ -35,6 +35,89 @@ const navSlide = () => {
 };
 
 navSlide();
+
+//////////////////////////////////////////////////
+// Card Modal
+const cardsContainer = document.querySelector(".works__content");
+const modal = document.querySelector(".modal");
+const modalImg = document.querySelector(".modal__img");
+
+const cancelBtn = document.querySelector(".modal__button--cancel");
+const prevButton = document.querySelector(".modal__button--prev");
+const nextButton = document.querySelector(".modal__button--next");
+
+let indexNo = 0;
+let curModalImgArr = null;
+// console.log(curModalImgArr);
+
+cardsContainer.addEventListener("click", function (e) {
+  // if we click on the btn link.. return
+  if (e.target.classList.contains("btn")) return;
+
+  const cardElement = e.target.closest(".card");
+
+  if (!cardElement) return; // if we dont get d card modal element
+
+  const imagesArr = Array.from(
+    document.querySelectorAll(`.${cardElement.dataset.modal}`)
+  );
+
+  console.log(imagesArr);
+
+  // stops the body scrolling
+  document.body.classList.add("stop-scrolling");
+
+  // display the modal
+  modal.classList.remove("remove-display");
+  modal.classList.add("add-display");
+
+  // add the src
+  modalImg.src = imagesArr[indexNo].src;
+
+  // Animate the image
+  modalImg.classList.remove("remove-image");
+  modalImg.classList.add("add-image");
+
+  curModalImgArr = imagesArr;
+});
+
+cancelBtn.addEventListener("click", function (e) {
+  // Animate out the image
+  modalImg.classList.remove("add-image");
+  modalImg.classList.add("remove-image");
+
+  // remove the modal
+  modal.classList.remove("add-display");
+  modal.classList.add("remove-display");
+
+  document.body.classList.remove("stop-scrolling");
+
+  indexNo = 0;
+});
+
+prevButton.addEventListener("click", function () {
+  if (indexNo === 0) {
+    indexNo = curModalImgArr.length - 1;
+    modalImg.src = curModalImgArr[indexNo].src;
+  } else {
+    indexNo -= 1;
+    modalImg.src = curModalImgArr[indexNo].src;
+  }
+  console.log(indexNo);
+});
+
+nextButton.addEventListener("click", function () {
+  indexNo += 1;
+
+  if (indexNo < curModalImgArr.length) {
+    // if d index is equal to d length of d array
+    modalImg.src = curModalImgArr[indexNo].src;
+  } else {
+    indexNo = 0;
+    modalImg.src = curModalImgArr[indexNo].src;
+  }
+  console.log(indexNo);
+});
 
 ///////////////////////////////////////
 // PAGE NAVIGATION

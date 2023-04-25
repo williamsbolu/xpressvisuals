@@ -150,6 +150,7 @@ nav a,
 .burger {
     cursor: pointer;
     display: none;
+    z-index: 9;
 
     @media only screen and (max-width: $bp-768px) {
         display: block;

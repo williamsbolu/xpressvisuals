@@ -144,7 +144,7 @@
                     <h3>Logo Designs</h3>
                 </div>
             </div>
-            <div class="card" data-modal="modal-1">
+            <div class="card" data-modal="modal-2">
                 <div class="card__picture card__picture--2">
                     <button class="card__picture--button">more</button>
                 </div>
@@ -152,7 +152,7 @@
                     <h3>Merch Designs</h3>
                 </div>
             </div>
-            <div class="card" data-modal="modal-1">
+            <div class="card" data-modal="modal-3">
                 <div class="card__picture card__picture--3">
                     <button class="card__picture--button">more</button>
                 </div>
@@ -160,7 +160,7 @@
                     <h3>Posters Designs</h3>
                 </div>
             </div>
-            <div class="card" data-modal="modal-1">
+            <div class="card" data-modal="modal-4">
                 <div class="card__picture card__picture--4">
                     <button class="card__picture--button">more</button>
                 </div>
@@ -207,7 +207,7 @@
         <div class="testimonials__box">
             <p class="testimonials__text">"I recently worked with xpress-visuals, and I must say that I am thoroughly
                 impressed with their work. From start to finish, the process was smooth and efficient, and I felt like I
-                was in good hands throughout. I would highly recommend xpress-visuals to anyone looking for high-quality
+                was in good hands throughout. I would highly recommend them to anyone looking for high-quality
                 graphics design work."</p>
 
             <div class="testimonials__user-box">
@@ -308,6 +308,24 @@
         <p>&copy;Xpress Visuals 2023.</p>
     </footer>
 
+    <div class="img-container">
+        <img src="img/soo-plum-logo.jpg" alt="soo plu logo" class="modal-1">
+        <img src="img/sooo-plum-xi.jpg" alt="soo plu logo" class="modal-1">
+        <img src="img/loGO-NEW-VISION-X.jpg" alt="new vision logo" class="modal-1">
+        <img src="img/awe cap logo.jpg" alt="active cap logo" class="modal-1">
+        <img src="img/WILLSART LOGO cv.jpg" alt="active cap logo" class="modal-1">
+
+        <img src="img/active-merch.jpg" alt="active merch" class="modal-2">
+        <img src="img/banger meal 2xy.jpg" alt="banga meal merch" class="modal-2">
+        <!-- <img src="img/no-limits.jpg" alt="" class="modal-2"> -->
+
+        <img src="img/30-days-posters.jpg" alt="vertical rave posters" class="modal-3">
+        <!-- <img src="img/IllustrationNBB.jpg" alt="" class="modal-3"> -->
+
+        <img src="img/vr1.jpg" alt="" class="modal-4">
+        <!-- <img src="img/mathematic.tv.png" alt="" class="modal-4"> -->
+    </div>
+
     <ul class="nav__links">
         <li class="nav__item">
             <a class="nav__link" href="#section--1">Home</a>
@@ -323,8 +341,31 @@
         </li>
     </ul>
 
-    <div class="nav__background cut-display">
+    <div class="nav__background cut-modal-display">
 
+    </div>
+
+    <div class="modal remove-display" id="modal">
+        <button class="modal__button--cancel">
+            <svg class="modal__icon-cancel">
+                <use xlink:href="img/sprite.svg#icon-x"></use>
+            </svg>
+        </button>
+        <div class="modal__content">
+            <button class="modal__button modal__button--prev">
+                <svg class="modal__icon-navigate">
+                    <use xlink:href="img/sprite.svg#icon-chevron-left"></use>
+                </svg>
+            </button>
+
+            <img src="img/active-merch.jpg" alt="img" class="modal__img remove-image">
+
+            <button class="modal__button modal__button--next">
+                <svg class="modal__icon-navigate">
+                    <use xlink:href="img/sprite.svg#icon-chevron-right"></use>
+                </svg>
+            </button>
+        </div>
     </div>
 
     <script src="js/main.js"></script>

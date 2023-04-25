@@ -59,16 +59,21 @@ body {
     height: 100vh;
 }
 
-.cut-display {
+.cut-modal-display {
     opacity: 0;
     width: 0;
     visibility: hidden;
     transition: opacity .45s;
 }
 
-.add-display {
+.add-modal-display {
     opacity: 1;
     width: 100%;
     visibility: visible;
     transition: opacity .45s;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
 }
